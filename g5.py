@@ -11,26 +11,26 @@ price_tle = 5
 chest_rewards = {
     "energy": {
         "probability": 40,
-        "reward_energy": [6, 8],
+        "reward_energy": [5, 6],
         "reward_tle": [0, 0],
     },
     "tle": {
         "probability": 30,
         "reward_energy": [0, 0],
-        "reward_tle": [3, 4],
+        "reward_tle": [2, 3],
     },
     "energy_tle": {
         "probability": 30,
-        "reward_energy": [3, 5],
-        "reward_tle": [2, 2],
+        "reward_energy": [2, 3],
+        "reward_tle": [1, 2],
     }
 }
 
 time_short = 10
 time_long = 60
 
-win_rate_linear = 0.8
-win_rate_tle = 0.6
+win_rate_linear = 1
+win_rate_tle = 1
 
 
 def win_chest(tle=False):
@@ -107,4 +107,4 @@ for i in range(10000):
     times.append(t)
 
 results.sort()
-print(np.median(results), np.median(times))
+print(np.median(results), np.mean(times))
